@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #fdf6fa; /* Soft Lilac Background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+h1, h2, h3, .brand {
+  font-family: 'Pacifico', cursive;
+  color: #b266b2;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #fce4ec;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  width: 100%;
+  border-top: 1px dashed #dda0dd;
+  color: #555;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #f4d6f4;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.divider {
+  border-top: 2px dashed #e0b3e0;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+}
+
+/* Text truncation utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
